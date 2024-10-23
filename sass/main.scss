@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Kablammo&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primary: #0074d9;
+$danger: #ff4136;
+
+$theme-colors: (
+    "primary": $primary,
+    "danger": $danger
+);
+
+$custom-colors: (
+    // ### Primary
+    "Very-Da-rk-Blue": #070439,
+    "Desaturated-Blue": #585989,
+    // ### Accent
+    "Bright-Blue": #3065f8,
+    "Moderate-Cyan": #3c9f8f,
+    // ### Neutral
+    "Light-Grayish-Blue": #f6f6fe,
+    "Light-Gray": #bfbfbf,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+html {
+    font-family: "Raleway", serif;
+}
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
