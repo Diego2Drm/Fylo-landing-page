@@ -26,9 +26,91 @@ html {
     font-family: "Raleway", serif;
 }
 
-.logo{
+.logo {
     width: 5rem;
 }
 
+.illustration-1,
+.illustration-2 {
+    width: 100%;
+}
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+.text-size {
+    font-size: 1rem;
+}
+
+.height {
+    height: 2.5rem;
+}
+
+.background {
+    background: url("../images/bg-curve-mobile.svg") no-repeat;
+    background-position: top;
+    height: 3rem;
+}
+.subtitle{
+    font-size: 1rem;
+}
+.text-paragraph {
+    font-size: .9rem;
+}
+
+.line {
+    position: relative;
+}
+
+.line::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 1.5px;
+    width: 50%;
+    background: #3c9f8f;
+}
+
+.avatar {
+    width: 3rem;
+}
+.input-started, .btn-started{
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    .text-size {
+        font-size: 1.3rem;
+    }
+    .background {
+        background: url("../images/bg-curve-desktop.svg") no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 8rem
+    }
+    .subtitle{
+        font-size: 2rem
+    }
+    .text-paragraph {
+        font-size: 1.3rem;
+    }
+    .card{
+        width: 70%;
+    }
+    .input-started{
+        width: 80%;
+    }
+    .btn-started{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .line::after {
+        width: 23%;
+        left: 0;
+        transform: translate(0);
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

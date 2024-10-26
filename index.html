@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
 
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
@@ -24,7 +25,7 @@
   </style>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
   <header>
     <nav class="navbar">
       <div class="container">
@@ -45,52 +46,132 @@
       </div>
     </nav>
   </header>
+  <main class="">
+    <section class="container mt-5">
+      <div class="row d-flex flex-lg-row-reverse">
+        <figure class="col-lg-6">
+          <img src="./images/illustration-1.svg" alt="illustration-1" class="illustration-1 ">
+        </figure>
+        <div class="col-lg-6 mt-4 pe-2 mt-lg-5 pt-lg-5">
+          <h3 class="fw-bold text-center fs-1 text-Very-Da-rk-Blue text-lg-start">All your files in one secure location,
+            accessible anywhere.</h3>
+          <p class="text-center px-3 text-Very-Da-rk-Blue fw-medium mt-4 text-lg-start px-lg-0 text-size">
+            Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends, family, and co-workers.
+          </p>
 
-  <!-- <li>Features</li>
-  <li>Team</li>
-  <li>Sign In</li> -->
-  <!-- All your files in one secure location, accessible anywhere.
+          <form class="container">
+            <div class="row row-gap-3 column-gap-3">
+              <input type="text" placeholder="Enter your email" class="col-lg-7 rounded-1 height">
+              <button type="submit" class="col-lg-4 btn text-white" style="--bs-btn-bg: #3065f8;">Get Started</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid mt-5 mt-lg-0 p-0">
+      <div class="background"></div>
+      <div class="row bg-Light-Grayish-Blue p-3 pb-5 p-lg-5 pt-lg-0 d-lg-flex flex-lg-row-reverse">
+        <figure class="col-lg-6">
+          <img src="./images/illustration-2.svg" alt="illustration-2" class="illustration-2">
+        </figure>
+        <div class="col-lg-6">
+          <div class="mt-5">
+            <h3 class="subtitle text-center fw-bold text-Very-Da-rk-Blue text-lg-start">Stay productive, wherever you
+              are</h3>
+            <p class="text-paragraph mt-4 fw-medium">
+              Never let location be an issue when accessing your files. Fylo has you covered for all of your file
+              storage
+              needs.
+            </p>
+            <p class="text-paragraph fw-medium">
+              Securely share files and folders with friends, family and colleagues for live collaboration. No email
+              attachments required!
+            </p>
+            <a href="#" class="text-center d-block mt-5 text-Moderate-Cyan text-decoration-none line text-lg-start">
+              See how Fylo works <img src="./images/icon-arrow.svg" alt="icon-arrow">
+            </a>
+          </div>
+          <div class="card shadow m-auto mt-5 ms-lg-0">
+            <div class="card-body">
+              <img src="./images/icon-quotes.svg" alt="icon-quotes">
+              <p class="text-paragraph mt-2 text-Desaturated-Blue fw-medium">
+                Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
+                become a well-oiled collaboration machine.
+              </p>
+              <figure class="d-flex align-items-center column-gap-2">
+                <img src="./images/avatar-testimonial.jpg" alt="avatar-testimonial" class="rounded-circle avatar">
+                <p class="text-Desaturated-Blue d-flex row text-paragraph pt-3">
+                  <span class="fw-bold">Kyle Burton</span>
+                  <span class="fw-medium">Founder & CEO, Huddle</span>
+                </p>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid bg-Desaturated-Blue py-5">
+      <div class="row">
+        <div class="card bg-transparent border-0 col-lg-6">
+          <div class="card-body text-center text-Light-Grayish-Blue text-lg-start">
+            <h3>Get early access today</h3>
+            <p class="mt-4 text-size">
+              It only takes a minute to sign up and our free starter tier is extremely generous.
+              If you have any questions, our support team would be happy to help you.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <form class="ps-4 pe-3 pt-lg-4">
+            <input type="text" placeholder="email@example" class="mb-2 ps-3 height input-started">
+            <button type="submit" class="btn bg-Bright-Blue text-Light-Grayish-Blue fw-medium btn-started">Get Started
+              For Free</button>
+          </form>
+        </div>
 
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family, and co-workers.
+      </div>
+    </section>
 
-  Get Started
+  </main>
+  <footer class="container-fluid bg-Very-Da-rk-Blue p-5 text-Light-Gray">
+   <section class="row gap-5">
+    <div class="col-lg-2">
+      <img src="./images/logo-footer.svg" alt="logo-footer" class="mb-4">
+      <p class="d-flex align-items-center column-gap-3">
+        <img src="./images/icon-phone.svg" alt="icon-phone">
+        <span>Phone: +1-543-123-4567</span>
+      </p>
+      <p class="d-flex align-items-center column-gap-3">
+        <img src="./images/icon-email.svg" alt="icon-email">
+        <span>example@fylo.com</span>
+      </p>
+    </div>
+    <div class="col-lg-2 offset-lg-1">
+      <ul class="list-unstyled d-flex flex-column row-gap-3 ">
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">About Us</a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">Jobs</a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">Press</a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <ul class="list-unstyled d-flex flex-column row-gap-3">
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="$">Contact Us</a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="$">Terms</a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="$">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <ul class="list-unstyled d-flex justify-content-center align-items-center gap-3">
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#"><i class="bi bi-facebook"></i></a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#"><i class="bi bi-twitter"></i></a></li>
+        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#"><i class="bi bi-instagram"></i></a></li>
+      </ul>
+    </div>
+   </section>
+  </footer>
 
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you 
-  covered for all of your file storage needs.
-
-  Securely share files and folders with friends, family and colleagues for 
-  live collaboration. No email attachments required!
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy -->
 
   <!-- <footer>
     <p class="attribution">
