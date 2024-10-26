@@ -62,8 +62,9 @@
 
           <form class="container">
             <div class="row row-gap-3 column-gap-3">
-              <input type="text" placeholder="Enter your email" class="col-lg-7 rounded-1 height">
-              <button type="submit" class="col-lg-4 btn text-white" style="--bs-btn-bg: #3065f8;">Get Started</button>
+              <input type="text" placeholder="Enter your email" class="col-lg-7 rounded-1 height" id="firstInput">
+              <span class="text-alert text-danger">Please check your email</span>
+              <button type="submit" class="col-lg-4 text-white btn btn-Bright-Blue" id="btnSubmitFirst">Get Started</button>
             </div>
           </form>
         </div>
@@ -124,8 +125,9 @@
         </div>
         <div class="col-lg-6">
           <form class="ps-4 pe-3 pt-lg-4">
-            <input type="text" placeholder="email@example" class="mb-2 ps-3 height input-started">
-            <button type="submit" class="btn bg-Bright-Blue text-Light-Grayish-Blue fw-medium btn-started">Get Started
+            <input type="text" placeholder="email@example" class="ps-3 height input-started" id="secondInput">
+            <span class="text-Light-Grayish-Blue text-alert-second">Please check your email</span>
+            <button type="submit" class="mt-3 btn btn-Bright-Blue text-Light-Grayish-Blue fw-medium btn-started" id="btnSubmitSecond">Get Started
               For Free</button>
           </form>
         </div>
@@ -148,28 +150,28 @@
       </p>
     </div>
     <div class="col-lg-2 offset-lg-1">
-      <ul class="list-unstyled d-flex flex-column row-gap-3 ">
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">About Us</a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">Jobs</a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">Press</a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#">Blog</a></li>
+      <ul class="list-unstyled d-flex flex-column row-gap-3">
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-underline link-opacity-50-hover" href="#">About Us</a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="#">Jobs</a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="#">Press</a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="#">Blog</a></p>
       </ul>
     </div>
     <div class="col-lg-2">
       <ul class="list-unstyled d-flex flex-column row-gap-3">
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="$">Contact Us</a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="$">Terms</a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="$">Privacy</a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="$">Contact Us</a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="$">Terms</a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="$">Privacy</a></li>
       </ul>
     </div>
     <div class="col-lg-2">
       <ul class="list-unstyled d-flex justify-content-center align-items-center gap-3">
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#"><i class="bi bi-facebook"></i></a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#"><i class="bi bi-twitter"></i></a></li>
-        <li><a class="text-Light-Gray link-underline-opacity-0 link-underline" href="#"><i class="bi bi-instagram"></i></a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="#"><i class="bi bi-facebook"></i></a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="#"><i class="bi bi-twitter"></i></a></li>
+        <li><a class="link-Light-Gray link-underline-opacity-0 link-opacity-50-hover link-underline" href="#"><i class="bi bi-instagram"></i></a></li>
       </ul>
     </div>
-   </section>
+  </section>
   </footer>
 
 
@@ -182,6 +184,58 @@
 
 
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    const firstInput = document.getElementById("firstInput");
+    const btn = document.getElementById('btnSubmitFirst');
+    const textAlert = document.querySelector('.text-alert');
+
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      validEmail(firstInput.value);
+    });
+
+
+    const validEmail = (email) => {
+      let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
+      const valid = expReg.test(email);
+
+      if (valid) {
+        firstInput.classList.remove("error");
+        textAlert.classList.add("text-alert")
+      } else {
+        firstInput.classList.add("error");
+        textAlert.classList.remove("text-alert")
+      }
+
+    }
+    const secondInput = document.getElementById("secondInput");
+    const btnSecond = document.getElementById('btnSubmitSecond');
+    const textAlertSecond = document.querySelector('.text-alert-second');
+
+
+    btnSecond.addEventListener('click', (e) => {
+      e.preventDefault();
+      validEmailSecond(secondInput.value);
+    });
+
+
+    const validEmailSecond = (email) => {
+      let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
+      const valid = expReg.test(email);
+
+      if (valid) {
+        secondInput.classList.remove("error");
+        textAlertSecond.classList.add("text-alert-second")
+      } else {
+        secondInput.classList.add("error");
+        textAlertSecond.classList.remove("text-alert-second")
+      }
+
+    }
+  </script>
 </body>
 
 </html>

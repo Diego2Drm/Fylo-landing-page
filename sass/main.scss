@@ -48,9 +48,11 @@ html {
     background-position: top;
     height: 3rem;
 }
-.subtitle{
+
+.subtitle {
     font-size: 1rem;
 }
+
 .text-paragraph {
     font-size: .9rem;
 }
@@ -73,34 +75,59 @@ html {
 .avatar {
     width: 3rem;
 }
-.input-started, .btn-started{
+
+.input-started,
+.btn-started {
     width: 100%;
 }
 
+// Actives States
+.height:focus {
+    border: 3px solid #3065f8;
+    outline: none;
+}
 
-@media (min-width: 768px) {
-    .text-size {
-        font-size: 1.3rem;
-    }
+.line:hover {
+    transition: all 500ms ease;
+    opacity: .5;
+}
+.error{
+    border: 2px solid red;
+}
+.text-alert, .text-alert-second{
+    display: none;
+}
+@media (min-width: 425px) {
     .background {
         background: url("../images/bg-curve-desktop.svg") no-repeat;
         background-size: cover;
         background-position: center;
         height: 8rem
     }
-    .subtitle{
+}
+
+@media (min-width: 768px) {
+    .text-size {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
         font-size: 2rem
     }
+
     .text-paragraph {
         font-size: 1.3rem;
     }
-    .card{
+
+    .card {
         width: 70%;
     }
-    .input-started{
+
+    .input-started {
         width: 80%;
     }
-    .btn-started{
+
+    .btn-started {
         width: 25%;
     }
 }
