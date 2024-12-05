@@ -101,11 +101,14 @@ html {
 // author
 .attribution {
     font-size: 11px;
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
   }
 
   .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: #3065f8;
   }
 
 @media (min-width: 425px) {
